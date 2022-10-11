@@ -1,6 +1,5 @@
-public class Person {
+public abstract class Person {
     private String name;
-    public String person;
 
     public Person(String name) {
         this.name = name;

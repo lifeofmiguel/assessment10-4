@@ -54,7 +54,18 @@ public class Ticket implements Payable{
     }
 
     @Override
-    public void printPaymentAmount() {
+    public String toString() {
+        return "Ticket{" +
+                "id=" + id +
+                ", origin='" + origin + '\'' +
+                ", destination='" + destination + '\'' +
+                ", seatNumber='" + seatNumber + '\'' +
+                ", price=" + price +
+                '}';
+    }
 
+    @Override
+    public void printPaymentAmount() {
+        System.out.println(price);
     }
 }

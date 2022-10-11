@@ -1,13 +1,20 @@
 public class Passenger extends Person {
-    private String ticket;
+    private Ticket ticket;
     private double creditCardLimit;
-    private String luggage;
+    private String[] luggage;
 
-    public Passenger(String name) {
+    public Passenger(String name, Ticket ticket, double creditCardLimit, String[] luggage) {
         super(name);
+        this.ticket = ticket;
+        this.creditCardLimit = creditCardLimit;
+        this.luggage = luggage;
     }
 
     public int getAmtOfLuggage(){
-        return getAmtOfLuggage();
+        return luggage.length;
+    }
+
+    public void printTicket(){
+        System.out.println(ticket);
     }
 }
